@@ -2,12 +2,14 @@ import React, {Component} from 'react'
 import '../../components/item/index.css'
 class Item extends Component {
     render() {
+
+        let {login,avatar_url,html_url} = this.props
         return (
             <div className="card">
-                <a href="https://github.com/reactjs" target="_blank">
-                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3146277763,293920617&fm=111&gp=0.jpg" style={{width:'100px'}}/>
+                <a href={html_url} target="_blank" rel="noopener noreferrer">
+                    <img src={avatar_url} style={{width:'100px'}} alt="avatar"/>
                 </a>
-                <p className="card-text">reactjs</p>
+                <p className="card-text">{login}</p>
             </div>
         )
     }
